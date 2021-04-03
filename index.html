@@ -19,21 +19,9 @@
         margin: 0;
       }
 
-      .bg {
-        background: url('novembersoundsbetter_web-19.jpeg') no-repeat center
-          center fixed;
-        bottom: 0;
-        background-size: cover;
-        filter: brightness(5%);
-        left: 0;
-        position: fixed;
-        right: 0;
-        top: 0;
-      }
-
       .parallax {
         perspective: 1px;
-        height: 100vh;
+        min-height: 100vh;
         overflow-x: hidden;
         overflow-y: auto;
       }
@@ -64,20 +52,6 @@
         z-index: 6;
       }
 
-      .ep {
-        animation-duration: 5s;
-        animation-name: fade-in-bg;
-        animation-timing-function: ease-out;
-        background: url('web.jpg');
-        background-color: #000000;
-        background-position: bottom center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        box-shadow: inset 0px -34px 50px 2px #000000;
-        filter: brightness(40%);
-        -webkit-box-shadow: inset 0px -34px 50px 2px #000000;
-      }
-
       .parallax {
         perspective-origin-x: 100%;
       }
@@ -87,25 +61,31 @@
 
       .parallax__group {
         position: relative;
-        height: 100vh;
+        min-height: 100vh;
         transform-style: preserve-3d;
       }
 
-      .content {
-        -webkit-transform: translate(-50%, -50%);
-        left: 50%;
-        position: absolute;
-        top: 50%;
-        transform: translateX(-50%, -50%);
+      .ep {
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        -webkit-background-size: cover;
+        -webkit-box-shadow: inset 0px -34px 50px 2px #000000;
+        animation-duration: 5s;
+        animation-name: fade-in-bg;
+        animation-timing-function: ease-out;
+        background-color: #000000;
+        background-image: url('web.jpg');
+        background-position: bottom center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        box-shadow: inset 0px -34px 50px 2px #000000;
+        filter: brightness(40%);
       }
 
       .band {
-        background: url('novembersoundsbetter_web-19.jpeg') no-repeat center
-          center;
-      }
-
-      .background-full {
-        background-size: 100%;
+        background-image: url('novembersoundsbetter_web-19.jpeg');
+        background-repeat: no-repeat;
+        background-position: center center;
       }
 
       .filter-brightness--5 {
@@ -113,7 +93,7 @@
       }
 
       h1 {
-        animation-duration: 8s;
+        animation-duration: 6s;
         animation-name: fade-in;
         animation-timing-function: ease-out;
         color: hsla(0, 0%, 95%, 0.8);
@@ -124,7 +104,6 @@
         text-align: center;
         text-shadow: 0px -12px 50px hsla(153, 12%, 5%, 0.9),
           0px 12px 50px hsla(153, 12%, 5%, 0.9);
-        text-transform: uppercase;
       }
 
       @media screen and (max-width: 1024px) {
@@ -143,11 +122,6 @@
 
       @keyframes fade-in-bg {
         0% {
-          filter: brightness(300%);
-          margin: -200px;
-          opacity: 0;
-        }
-        15% {
           filter: brightness(300%);
           margin: -200px;
           opacity: 0;
@@ -194,49 +168,42 @@
         color: white;
       }
 
-      .bio {
-        align-items: center;
-        color: #ffffff;
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-      }
-
       .songs {
-        text-align: center;
         text-transform: uppercase;
         animation: fade-in-text;
-        animation-duration: 8.8s;
+        animation-duration: 6.8s;
         animation-timing-function: ease-out;
         text-shadow: 0px -10px 10px hsla(153, 12%, 5%, 0.5),
           0px 10px 10px hsla(153, 12%, 5%, 0.5);
         letter-spacing: 0.5rem;
       }
 
-      #group1 {
-        z-index: 3;
+      .streamservice {
+        max-width: 200px;
       }
 
-      #group2 {
-        z-index: 4;
+      .streamservice-apple_music {
+        max-width: 80px;
       }
     </style>
   </head>
   <body>
-    <div class="bg"></div>
     <div class="parallax">
-      <div id="group1" class="parallax__group">
+      <div class="parallax__group">
         <div class="parallax__layer parallax__layer--base">
-          <div class="content flex h-full flex-col w-full md:p-6 p-4">
-            <div class="flex flex-1 flex-col justify-end">
-              <h1
-                class="2xl:text-8xl xl:text-7xl lg:text-5xl md:text-2xl text-lg w-full leading-10"
+          <div class="md:p-6 p-4 flex flex-col items-center">
+            <div class="flex flex-col min-h-screen">
+              <div class="flex flex-1 flex-col justify-end">
+                <h1
+                  class="2xl:text-8xl xl:text-7xl lg:text-5xl md:text-2xl text-lg w-full leading-10 mb-6 uppercase"
+                >
+                  No Place Like Here
+                </h1>
+              </div>
+              <div
+                class="songs flex-1 flex flex-col justify-center text-center uppercase"
               >
-                No Place Like Here
-              </h1>
-            </div>
-            <div class="songs flex-1 flex flex-col justify-center">
-              <ul
+                <!-- <ul
                 class="leading-6 xl:text-xl lg:text-lg md:text-md sm:text-sm text-xs"
               >
                 <li class="md:mb-6 md:mb-6 mb-4">
@@ -244,42 +211,50 @@
                 </li>
                 <li class="md:mb-6 mb-4">II. Nothing As It Seems</li>
                 <li>III. Your Truth, Not Mine</li>
+              </ul> -->
+                <h2 class="mb-8 text-white">Out now</h2>
+                <div class="flex flex-col items-center justify-center">
+                  <img class="mb-8 streamservice" "alt="Spotify"
+                  src="spotify.png" />
+                  <img
+                    class="mb-12 streamservice"
+                    alt="Deezer"
+                    src="deezer.png"
+                  />
+                  <img
+                    class="mb-8 streamservice streamservice-apple_music"
+                    alt="Apple Music"
+                    src="apple_music.svg"
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              class="flex flex-col items-center justify-center 2xl:w-6/12 xl:w-8/12 lg:w-10/12 w-full"
+            >
+              <img class="mb-6" src="novembersoundsbetter_web-19.jpeg" />
+              <p class="xl:mb-12 md:mb-6 mb-2 text-white text-center">
+                Novembersoundsbetter hails from Tampere, Finland despite their
+                huge sound nodding towards the americas. Regarding musical
+                genres, these guys wander the road not taken. However, some
+                elements from post-hardcore and nu-metal can be heard as well as
+                some movie-like sonar sceneries from post-rock. NSB are like a
+                fresh breath of air in the finnish rock/metal scene even though
+                their release catalog already includes 3 albums and several
+                EP:s. In their live shows you will witness some raw high energy
+                music finessed with sensitive emotional barrage.
+              </p>
+              <ul>
+                <li class="md:mb-3">Jimi - G & V</li>
+                <li class="md:mb-3">Pirkka - V</li>
+                <li class="md:mb-3">Santtu - G & V</li>
+                <li class="md:mb-3">Roope - G</li>
+                <li class="md:mb-3">Eetu - D & V</li>
               </ul>
             </div>
           </div>
         </div>
         <div class="parallax__layer parallax__layer--back ep"></div>
-      </div>
-      <div id="group2" class="parallax__group">
-        <div
-          class="parallax__layer parallax__layer--base background-full band"
-        ></div>
-      </div>
-      <div id="group3" class="parallax__group">
-        <div
-          class="parallax__layer parallax__layer--base bio p-6 text-center lg:text-lg md:text-md text-sm"
-        >
-          <div class="2xl:w-6/12 xl:w-8/12 lg:w-10/12 w-full">
-            <p class="xl:mb-12 md:mb-6 mb-2">
-              Novembersoundsbetter hails from Tampere, Finland despite their
-              huge sound nodding towards the americas. Regarding musical genres,
-              these guys wander the road not taken. However, some elements from
-              post-hardcore and nu-metal can be heard as well as some movie-like
-              sonar sceneries from post-rock. NSB are like a fresh breath of air
-              in the finnish rock/metal scene even though their release catalog
-              already includes 3 albums and several EP:s. In their live shows
-              you will witness some raw high energy music finessed with
-              sensitive emotional barrage.
-            </p>
-            <ul>
-              <li class="md:mb-3">Jimi - G & V</li>
-              <li class="md:mb-3">Pirkka - V</li>
-              <li class="md:mb-3">Santtu - G & V</li>
-              <li class="md:mb-3">Roope - G</li>
-              <li class="md:mb-3">Eetu - D & V</li>
-            </ul>
-          </div>
-        </div>
       </div>
     </div>
   </body>
