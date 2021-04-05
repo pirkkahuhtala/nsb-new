@@ -115,8 +115,8 @@
 
       @media screen and (max-width: 768px) {
         h1 {
-          text-shadow: 0px -4px 10px hsla(153, 12%, 10%, 0.8),
-            0px 4px 10px hsla(153, 12%, 10%, 0.8);
+          text-shadow: 0px -4px 10px hsla(153, 12%, 10%, 0.2),
+            0px 4px 10px hsla(153, 12%, 10%, 0.2);
         }
       }
 
@@ -178,12 +178,12 @@
         letter-spacing: 0.5rem;
       }
 
-      .streamservice {
-        max-width: 200px;
+      .leading-16 {
+        line-height: 4rem;
       }
 
-      .streamservice-apple_music {
-        max-width: 80px;
+      .members-caption {
+        color: #7e9b8f;
       }
     </style>
   </head>
@@ -191,17 +191,17 @@
     <div class="parallax">
       <div class="parallax__group">
         <div class="parallax__layer parallax__layer--base">
-          <div class="md:p-6 p-4 flex flex-col items-center">
+          <div class="flex flex-col items-center">
             <div class="flex flex-col min-h-screen">
               <div class="flex flex-1 flex-col justify-end">
                 <h1
-                  class="2xl:text-8xl xl:text-7xl lg:text-5xl md:text-2xl text-lg w-full leading-10 mb-6 uppercase"
+                  class="2xl:text-8xl xl:text-7xl lg:text-5xl md:text-3xl text-base w-full leading-16 pl-7 mb-6 uppercase"
                 >
                   No Place Like Here
                 </h1>
               </div>
               <div
-                class="songs flex-1 flex flex-col justify-center text-center uppercase"
+                class="songs flex-1 flex flex-col justify-center text-center"
               >
                 <!-- <ul
                 class="leading-6 xl:text-xl lg:text-lg md:text-md sm:text-sm text-xs"
@@ -212,17 +212,31 @@
                 <li class="md:mb-6 mb-4">II. Nothing As It Seems</li>
                 <li>III. Your Truth, Not Mine</li>
               </ul> -->
-                <h2 class="mb-8 text-white">Out now</h2>
-                <div class="flex flex-col items-center justify-center">
-                  <img class="mb-8 streamservice" "alt="Spotify"
-                  src="spotify.png" />
+                <h2
+                  class="pl-3 mb-8 text-white uppercase text-opacity-80 lg:text-3xl md:text-2xl text-sm"
+                >
+                  Out now
+                </h2>
+                <div
+                  class="flex md:flex-row flex-col items-center justify-center"
+                >
                   <img
-                    class="mb-12 streamservice"
+                    class="mb-3 md:mr-6 md:w-32 w-24"
+                    alt="Spotify"
+                    src="spotify.png"
+                  />
+                  <img
+                    class="mb-3 md:mr-6 md:w-32 w-24"
                     alt="Deezer"
                     src="deezer.png"
                   />
                   <img
-                    class="mb-8 streamservice streamservice-apple_music"
+                    class="mb-2 md:mr-6 md:w-48 w-40"
+                    alt="Bandcamp"
+                    src="bandcamp-logotype-light-128.png"
+                  />
+                  <img
+                    class="md:w-44 w-36"
                     alt="Apple Music"
                     src="apple_music.svg"
                   />
@@ -232,25 +246,46 @@
             <div
               class="flex flex-col items-center justify-center 2xl:w-6/12 xl:w-8/12 lg:w-10/12 w-full"
             >
-              <img class="mb-6" src="novembersoundsbetter_web-19.jpeg" />
-              <p class="xl:mb-12 md:mb-6 mb-2 text-white text-center">
-                Novembersoundsbetter hails from Tampere, Finland despite their
-                huge sound nodding towards the americas. Regarding musical
-                genres, these guys wander the road not taken. However, some
-                elements from post-hardcore and nu-metal can be heard as well as
-                some movie-like sonar sceneries from post-rock. NSB are like a
-                fresh breath of air in the finnish rock/metal scene even though
-                their release catalog already includes 3 albums and several
-                EP:s. In their live shows you will witness some raw high energy
-                music finessed with sensitive emotional barrage.
-              </p>
-              <ul>
-                <li class="md:mb-3">Jimi - G & V</li>
-                <li class="md:mb-3">Pirkka - V</li>
-                <li class="md:mb-3">Santtu - G & V</li>
-                <li class="md:mb-3">Roope - G</li>
-                <li class="md:mb-3">Eetu - D & V</li>
-              </ul>
+              <img src="novembersoundsbetter_web-19.jpeg" />
+              <div class="p-6">
+                <p class="base mb-6 text-justify text-white">
+                  Novembersoundsbetter hails from Tampere, Finland despite their
+                  huge sound nodding towards the americas. Regarding musical
+                  genres, these guys wander the road not taken. However, some
+                  elements from post-hardcore and nu-metal can be heard as well
+                  as some movie-like sonar sceneries from post-rock. NSB are
+                  like a fresh breath of air in the finnish rock/metal scene
+                  even though their release catalog already includes 3 albums
+                  and several EP:s. In their live shows you will witness some
+                  raw high energy music finessed with sensitive emotional
+                  barrage.
+                </p>
+                <p class="text-sm mb-2 text-white text-center members-caption">
+                  (From left to right)
+                </p>
+                <ul class="mb-12">
+                  <li class="mb-3">Jimi - G & V</li>
+                  <li class="mb-3">Pirkka - V</li>
+                  <li class="mb-3">Santtu - G & V</li>
+                  <li class="mb-3">Roope - G</li>
+                  <li class="mb-3">Eetu - D & V</li>
+                </ul>
+                <div class="flex justify-center">
+                  <img
+                    class="mr-3 w-8"
+                    src="iconfinder_BW_Facebook_2_glyph_svg_5305153.svg"
+                  />
+                  <img
+                    class="mr-3 w-8"
+                    src="iconfinder_Instagram_glyph_svg_5335781.svg"
+                  />
+                  <img
+                    class="mr-3 w-8"
+                    src="iconfinder_BW_Youtube_glyph_svg_5305164.svg"
+                  />
+                  <img class="w-8" src="iconfinder_74-soundcloud_104428.svg" />
+                </div>
+              </div>
             </div>
           </div>
         </div>
