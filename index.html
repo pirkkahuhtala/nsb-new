@@ -35,6 +35,18 @@
 
       gtag('config', 'G-EL2V44X9LF');
     </script>
+    <script>
+      window.onload = function () {
+        var isOutNow =
+          new Date('2021-04-16 00:00:00').getTime() <= new Date().getTime();
+        const outNowElem = document.getElementById('out-now');
+        if (isOutNow) {
+          outNowElem.innerHTML = 'Out now';
+        } else {
+          outNowElem.innerHTML = 'Coming soon';
+        }
+      };
+    </script>
   </head>
   <body>
     <div class="parallax">
@@ -53,33 +65,41 @@
                 class="songs flex-1 flex flex-col justify-center text-center"
               >
                 <span
+                  id="out-now"
                   class="pl-3 md:mb-8 mb-3 text-white uppercase text-opacity-80 lg:text-3xl md:text-2xl text-sm"
                 >
-                  Out now
+                  Coming soon
                 </span>
                 <div
                   class="flex md:flex-row flex-col items-center justify-center"
                 >
-                  <img
-                    class="mb-3 md:mr-6 md:w-32 w-24"
-                    alt="Spotify"
-                    src="spotify.png"
-                  />
-                  <img
-                    class="mb-3 md:mr-6 md:w-32 w-24"
-                    alt="Deezer"
-                    src="deezer.png"
-                  />
-                  <img
-                    class="mb-2 md:mr-6 md:w-48 w-40"
-                    alt="Bandcamp"
-                    src="bandcamp-logotype-light-128.png"
-                  />
-                  <img
-                    class="md:w-44 w-36"
-                    alt="Apple Music"
-                    src="apple_music.svg"
-                  />
+                  <a href="https://sptfy.com/novembersoundsbetter">
+                    <img
+                      class="mb-3 md:mr-6 md:w-32 w-24"
+                      alt="Spotify"
+                      src="spotify.png"
+                  /></a>
+                  <a href="https://www.deezer.com/en/artist/296650">
+                    <img
+                      class="mb-3 md:mr-6 md:w-32 w-24"
+                      alt="Deezer"
+                      src="deezer.png"
+                    />
+                  </a>
+                  <a href="https://novembersoundsbetter.bandcamp.com/">
+                    <img
+                      class="mb-2 md:mr-6 md:w-48 w-40"
+                      alt="Bandcamp"
+                      src="bandcamp-logotype-light-128.png"
+                    />
+                  </a>
+                  <a href="https://tiny.one/novembersoundsbetter">
+                    <img
+                      class="md:w-44 w-36"
+                      alt="Apple Music"
+                      src="apple_music.svg"
+                    />
+                  </a>
                 </div>
               </div>
             </div>
@@ -93,12 +113,12 @@
               <div class="p-6">
                 <p class="base mb-6 text-justify text-white">
                   <span class="text-nsb-blue">Novembersoundsbetter</span> hails
-                  from Tampere, Finland despite their huge sound nodding towards
-                  the americas. Regarding musical genres, these guys wander the
-                  road not taken. However, some elements from post-hardcore and
-                  nu-metal can be heard as well as some movie-like sonar
+                  from Tampere, Finland, despite their huge sound nodding
+                  towards the americas. Regarding musical genres, these guys
+                  wander the road not taken. However, some elements from
+                  post-hardcore can be heard as well as some movie-like sonar
                   sceneries from post-rock. NSB are like a fresh breath of air
-                  in the finnish rock/metal scene even though their release
+                  in the Finnish rock/metal scene even though their release
                   catalog already includes 3 albums and several EP:s. In their
                   live shows you will witness some raw high energy music
                   finessed with sensitive emotional barrage.
