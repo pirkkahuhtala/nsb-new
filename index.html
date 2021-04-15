@@ -39,11 +39,9 @@
       window.onload = function () {
         var isOutNow =
           new Date('2021-04-16 00:00:00').getTime() <= new Date().getTime();
-        const outNowElem = document.getElementById('out-now');
-        if (isOutNow) {
-          outNowElem.innerHTML = 'Out now';
-        } else {
-          outNowElem.innerHTML = 'Coming soon';
+        const bodyElem = document.getElementsByTagName('body')[0];
+        if (!isOutNow) {
+          bodyElem.innerHTML = '';
         }
       };
     </script>
@@ -65,7 +63,6 @@
                 class="songs flex-1 flex flex-col justify-center text-center"
               >
                 <span
-                  id="out-now"
                   class="pl-3 md:mb-8 mb-3 text-white uppercase text-opacity-80 lg:text-3xl md:text-2xl text-sm"
                 >
                   Coming soon
