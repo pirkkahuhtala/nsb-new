@@ -1,7 +1,13 @@
 body {
   background-color: #000000;
-  font-family: 'Biryani', sans-serif;
+  font-family: "Biryani", sans-serif;
   margin: 0;
+}
+
+@font-face {
+  font-family: "GoboldHigh";
+  src: url("GoboldHigh.woff2") format("woff2"),
+    url("GoboldHigh.woff") format("woff");
 }
 
 .parallax {
@@ -59,7 +65,7 @@ body {
   animation-name: fade-in-bg;
   animation-timing-function: ease-out;
   background-color: #000000;
-  background-image: url('web.jpg');
+  background-image: url("web.jpg");
   background-position: bottom center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -68,13 +74,18 @@ body {
 }
 
 .band {
-  background-image: url('novembersoundsbetter_web-19.jpeg');
+  background-image: url("novembersoundsbetter_web-19.jpeg");
   background-repeat: no-repeat;
   background-position: center center;
 }
 
 .filter-brightness--5 {
   filter: brightness(5%);
+}
+
+h1,
+h2 {
+  font-family: "GoboldHigh";
 }
 
 h1 {
@@ -164,9 +175,9 @@ li {
 }
 
 .leading-16 {
-  line-height: 4rem;
+  line-height: 1.5;
 }
 
-.text-nsb-blue {
-  color: #7e9b8f;
+.color-nsb-primary {
+  color: #d1ba54;
 }
