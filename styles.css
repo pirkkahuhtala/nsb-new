@@ -155,9 +155,11 @@ h1 {
 
 @keyframes scale-in {
   from {
-    flex: 0 0 0%;
+    margin-bottom: -50%;
+    flex: 1 1 0%;
   }
   to {
+    margin-bottom: 0;
     flex: 1 1 100%;
   }
 }
