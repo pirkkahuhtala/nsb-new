@@ -65,7 +65,7 @@ body {
   animation-name: fade-in-bg;
   animation-timing-function: ease-out;
   background-color: #000000;
-  background-image: url("web.jpg");
+  background-image: url("web.webp");
   background-position: bottom center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -180,4 +180,20 @@ li {
 
 .color-nsb-primary {
   color: #d1ba54;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotateY(80deg);
+  }
+  to {
+    transform: rotateY(0deg);
+  }
+}
+
+.char {
+  animation-name: rotate;
+  animation-duration: 10s;
+  animation-timing-function: ease-out;
+  display: inline-block;
 }
