@@ -88,10 +88,17 @@ h2 {
   font-family: "GoboldHigh";
 }
 
+@keyframes lift-up {
+  from {
+    margin-bottom: -3rem;
+  }
+  to {
+    margin-bottom: 1.5rem;
+  }
+}
+
 h1 {
-  animation-duration: 6s;
-  animation-name: fade-in;
-  animation-timing-function: ease-out;
+  animation: fade-in 6s ease-out, lift-up 2s ease-in-out 6.7s both;
   color: hsla(0, 0%, 95%, 0.8);
   font-size: 8rem;
   letter-spacing: 1.5rem;
@@ -99,6 +106,7 @@ h1 {
   text-align: center;
   text-shadow: 0px -12px 50px hsla(153, 12%, 5%, 0.9),
     0px 12px 50px hsla(153, 12%, 5%, 0.9);
+  margin-top: 39vh;
 }
 
 @media screen and (max-width: 1024px) {
@@ -152,15 +160,6 @@ h1 {
   }
 }
 
-@keyframes scale-in {
-  from {
-    flex: 0 0 0%;
-  }
-  to {
-    flex: 1 1 100%;
-  }
-}
-
 ul {
   text-align: center;
   color: white;
@@ -172,11 +171,14 @@ li {
 
 .songs {
   text-transform: uppercase;
-  animation: fade-in-text 1s ease-in-out 6.3s both,
-    scale-in 1s ease-in-out 6.3s both;
+  animation: fade-in-text 1s ease-in-out 7.3s both;
   text-shadow: 0px -10px 10px hsla(153, 12%, 5%, 0.5),
     0px 10px 10px hsla(153, 12%, 5%, 0.5);
   letter-spacing: 0.5rem;
+  display: flex;
+  flex: 1 1 0;
+  flex-direction: column;
+  text-align: center;
 }
 
 .leading-16 {
@@ -224,4 +226,11 @@ li {
     animation: rotate 10s ease-out, flickering 300ms linear 3.8s;
     display: inline-block;
   }
+}
+
+.heading-container {
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
