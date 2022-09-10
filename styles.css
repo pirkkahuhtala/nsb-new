@@ -183,17 +183,33 @@ li {
 }
 
 @keyframes rotate {
-  from {
+  0% {
     transform: rotateY(80deg);
   }
-  to {
+  10% {
+    transform: rotateY(80deg);
+  }
+  100% {
     transform: rotateY(0deg);
   }
 }
 
+@keyframes flickering {
+  0% {
+    color: white;
+    text-decoration: none;
+  }
+  50% {
+    color: black;
+    text-decoration: line-through;
+  }
+  100% {
+    color: white;
+    text-decoration: none;
+  }
+}
+
 .char {
-  animation-name: rotate;
-  animation-duration: 10s;
-  animation-timing-function: ease-out;
+  animation: rotate 10s ease-out, flickering 300ms linear 3.8s;
   display: inline-block;
 }
