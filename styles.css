@@ -117,7 +117,7 @@ h1 {
 }
 
 @keyframes fade-in-bg {
-  0% {
+  from {
     filter: brightness(300%);
     margin: -200px;
     opacity: 0;
@@ -144,14 +144,20 @@ h1 {
 }
 
 @keyframes fade-in-text {
-  0% {
+  from {
     opacity: 0;
   }
-  80% {
-    opacity: 0;
-  }
-  100% {
+  to {
     opacity: 1;
+  }
+}
+
+@keyframes scale-in {
+  from {
+    flex: 0 0 0%;
+  }
+  to {
+    flex: 1 1 100%;
   }
 }
 
@@ -166,9 +172,8 @@ li {
 
 .songs {
   text-transform: uppercase;
-  animation: fade-in-text;
-  animation-duration: 6.8s;
-  animation-timing-function: ease-out;
+  animation: fade-in-text 1s ease-in-out 6.3s both,
+    scale-in 1s ease-in-out 6.3s both;
   text-shadow: 0px -10px 10px hsla(153, 12%, 5%, 0.5),
     0px 10px 10px hsla(153, 12%, 5%, 0.5);
   letter-spacing: 0.5rem;
@@ -210,6 +215,13 @@ li {
 }
 
 .char {
-  animation: rotate 10s ease-out, flickering 300ms linear 3.8s;
+  animation: rotate 10s ease-out;
   display: inline-block;
+}
+
+@media (min-width: 1024px) {
+  .char {
+    animation: rotate 10s ease-out, flickering 300ms linear 3.8s;
+    display: inline-block;
+  }
 }
