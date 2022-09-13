@@ -98,7 +98,7 @@ h2 {
 }
 
 h1 {
-  animation: fade-in 6s ease-out, lift-up 2s ease-in-out 6.7s both;
+  animation: fade-in 6s ease-out;
   color: hsla(0, 0%, 95%, 0.8);
   font-size: 8rem;
   letter-spacing: 1.5rem;
@@ -106,7 +106,8 @@ h1 {
   text-align: center;
   text-shadow: 0px -12px 50px hsla(153, 12%, 5%, 0.9),
     0px 12px 50px hsla(153, 12%, 5%, 0.9);
-  margin-top: 39vh;
+  margin-top: 36vh;
+  margin-bottom: 2.5rem;
 }
 
 @media screen and (max-width: 1024px) {
@@ -171,7 +172,7 @@ li {
 
 .songs {
   text-transform: uppercase;
-  animation: fade-in-text 1s ease-in-out 7.3s both;
+  animation: fade-in-text 1s ease-in-out 7s both;
   text-shadow: 0px -10px 10px hsla(153, 12%, 5%, 0.5),
     0px 10px 10px hsla(153, 12%, 5%, 0.5);
   letter-spacing: 0.5rem;
@@ -201,21 +202,6 @@ li {
   }
 }
 
-@keyframes flickering {
-  0% {
-    color: white;
-    text-decoration: none;
-  }
-  50% {
-    color: black;
-    text-decoration: line-through;
-  }
-  100% {
-    color: white;
-    text-decoration: none;
-  }
-}
-
 .char {
   animation: rotate 10s ease-out;
   display: inline-block;
@@ -223,7 +209,7 @@ li {
 
 @media (min-width: 1024px) {
   .char {
-    animation: rotate 10s ease-out, flickering 300ms linear 3.8s;
+    animation: rotate 10s ease-out;
     display: inline-block;
   }
 }
